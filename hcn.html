@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+</body>
+<script>
+  class Rectangle{
+    constructor(long, width) {
+      this.long = long;
+      this.width = width;
+    }
+    getLong(){
+      return this.long;
+    }
+    getWidth(){
+      return this.width;
+    }
+
+
+    setLong(long){
+      this.long = long;
+    }
+    set(width){
+      this.width = width;
+    }
+
+    area(){
+        console.log(this.getLong()*this.getWidth());
+    }
+    cv(){
+        console.log(2*(this.getLong()+this.getWidth()));
+    }
+  }
+
+  const RectangleChild= new Rectangle(120, 80);
+  console.log(RectangleChild);
+  RectangleChild.area();
+  RectangleChild.cv();
+  let canvas = document.getElementById("myCanvas");
+  let ctm = canvas.getContext("2d");
+  ctm.fillStyle = '#187aea';
+  ctm.fillRect(120,80,RectangleChild.getLong(), RectangleChild.getWidth());
+
+</script>
+
+</html>
