@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Practice</title>
 </head>
 <body>
-$END$
+
 </body>
 </html>
+<script>
+  // function Mobie(id, name){
+  //   this.id = id;
+  //   this.name = name;
+  //   this.message = "";
+  //   this.setMessage =
+  // }
+
+  class Mobie{
+      constructor(id, name) {
+          this.idd = id;
+          this.name = name;
+          this.message = "";
+      }
+      setMessage(message){
+          this.message = message;
+      }
+      getMessage(){
+          return this.message;
+      }
+      senMessage(message, mobie){
+          mobie.setMessage(message);
+      }
+  }
+  var iphone = new Mobie(1,"Iphone")
+  var android = new Mobie(2,"Samsung")
+  iphone.senMessage("message from Iphone ",android);
+  var message = android.getMessage();
+  console.log(message);
+
+</script>
